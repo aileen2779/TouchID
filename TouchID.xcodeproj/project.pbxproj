@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7ECD70BE1EEF4A6B00F437AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70BD1EEF4A6B00F437AA /* AppDelegate.swift */; };
-		7ECD70C01EEF4A6B00F437AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70BF1EEF4A6B00F437AA /* ViewController.swift */; };
+		7ECD70C01EEF4A6B00F437AA /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70BF1EEF4A6B00F437AA /* TouchIDVC.swift */; };
 		7ECD70C31EEF4A6B00F437AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD70C11EEF4A6B00F437AA /* Main.storyboard */; };
 		7ECD70C51EEF4A6B00F437AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD70C41EEF4A6B00F437AA /* Assets.xcassets */; };
 		7ECD70C81EEF4A6B00F437AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD70C61EEF4A6B00F437AA /* LaunchScreen.storyboard */; };
 		7ECD70D31EEF4A6B00F437AA /* TouchIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70D21EEF4A6B00F437AA /* TouchIDTests.swift */; };
 		7ECD70DE1EEF4A6B00F437AA /* TouchIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70DD1EEF4A6B00F437AA /* TouchIDUITests.swift */; };
+		7ECD70ED1EEF4A7A00F437AA /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECD70EC1EEF4A7A00F437AA /* LocalAuthentication.framework */; };
+		7ECD70F41EEF4C5F00F437AA /* TouchIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70F21EEF4C5F00F437AA /* TouchIDManager.m */; };
+		7ECD70F51EEF4C5F00F437AA /* TouchIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70F31EEF4C5F00F437AA /* TouchIDManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		7ECD70BA1EEF4A6B00F437AA /* TouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECD70BD1EEF4A6B00F437AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7ECD70BF1EEF4A6B00F437AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7ECD70BF1EEF4A6B00F437AA /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
 		7ECD70C21EEF4A6B00F437AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ECD70C41EEF4A6B00F437AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECD70C71EEF4A6B00F437AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,12 @@
 		7ECD70D91EEF4A6B00F437AA /* TouchIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECD70DD1EEF4A6B00F437AA /* TouchIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDUITests.swift; sourceTree = "<group>"; };
 		7ECD70DF1EEF4A6B00F437AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECD70EC1EEF4A7A00F437AA /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		7ECD70EF1EEF4C5E00F437AA /* TouchID-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchID-Bridging-Header.h"; sourceTree = "<group>"; };
+		7ECD70F01EEF4C5F00F437AA /* TouchIDBlogPost-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TouchIDBlogPost-Bridging-Header.h"; path = "TouchIDResources/TouchIDBlogPost-Bridging-Header.h"; sourceTree = "<group>"; };
+		7ECD70F11EEF4C5F00F437AA /* TouchIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchIDManager.h; path = TouchIDResources/TouchIDManager.h; sourceTree = "<group>"; };
+		7ECD70F21EEF4C5F00F437AA /* TouchIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchIDManager.m; path = TouchIDResources/TouchIDManager.m; sourceTree = "<group>"; };
+		7ECD70F31EEF4C5F00F437AA /* TouchIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDManager.swift; path = TouchIDResources/TouchIDManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECD70ED1EEF4A7A00F437AA /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +87,12 @@
 		7ECD70B11EEF4A6B00F437AA = {
 			isa = PBXGroup;
 			children = (
+				7ECD70EE1EEF4BDA00F437AA /* Resources */,
 				7ECD70BC1EEF4A6B00F437AA /* TouchID */,
 				7ECD70D11EEF4A6B00F437AA /* TouchIDTests */,
 				7ECD70DC1EEF4A6B00F437AA /* TouchIDUITests */,
 				7ECD70BB1EEF4A6B00F437AA /* Products */,
+				7ECD70EB1EEF4A7A00F437AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				7ECD70BD1EEF4A6B00F437AA /* AppDelegate.swift */,
-				7ECD70BF1EEF4A6B00F437AA /* ViewController.swift */,
+				7ECD70BF1EEF4A6B00F437AA /* TouchIDVC.swift */,
 				7ECD70C11EEF4A6B00F437AA /* Main.storyboard */,
 				7ECD70C41EEF4A6B00F437AA /* Assets.xcassets */,
 				7ECD70C61EEF4A6B00F437AA /* LaunchScreen.storyboard */,
@@ -123,6 +135,26 @@
 				7ECD70DF1EEF4A6B00F437AA /* Info.plist */,
 			);
 			path = TouchIDUITests;
+			sourceTree = "<group>";
+		};
+		7ECD70EB1EEF4A7A00F437AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD70EC1EEF4A7A00F437AA /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ECD70EE1EEF4BDA00F437AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD70F01EEF4C5F00F437AA /* TouchIDBlogPost-Bridging-Header.h */,
+				7ECD70F11EEF4C5F00F437AA /* TouchIDManager.h */,
+				7ECD70F21EEF4C5F00F437AA /* TouchIDManager.m */,
+				7ECD70F31EEF4C5F00F437AA /* TouchIDManager.swift */,
+				7ECD70EF1EEF4C5E00F437AA /* TouchID-Bridging-Header.h */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +225,8 @@
 				TargetAttributes = {
 					7ECD70B91EEF4A6B00F437AA = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = YW3K5AK57B;
+						DevelopmentTeam = U47Q3369SJ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					7ECD70CD1EEF4A6B00F437AA = {
@@ -262,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ECD70C01EEF4A6B00F437AA /* ViewController.swift in Sources */,
+				7ECD70C01EEF4A6B00F437AA /* TouchIDVC.swift in Sources */,
+				7ECD70F41EEF4C5F00F437AA /* TouchIDManager.m in Sources */,
+				7ECD70F51EEF4C5F00F437AA /* TouchIDManager.swift in Sources */,
 				7ECD70BE1EEF4A6B00F437AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,11 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YW3K5AK57B;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U47Q3369SJ;
 				INFOPLIST_FILE = TouchID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.702shifters.TouchID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchID-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -430,11 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = YW3K5AK57B;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = U47Q3369SJ;
 				INFOPLIST_FILE = TouchID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.702shifters.TouchID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchID-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
