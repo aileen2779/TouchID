@@ -9,7 +9,7 @@ import AudioToolbox
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    let url  = "http://www.702shifters.com/ios_auth.php"
+    let url  = URL_AUTH
     
     @IBOutlet weak var loginStackView: UIStackView!
     @IBOutlet weak var logoutStackView: UIStackView!

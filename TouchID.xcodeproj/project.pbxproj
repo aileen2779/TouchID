@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EC5D4C31EEF59C9009B4977 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5D4C21EEF59C9009B4977 /* Constants.swift */; };
 		7ECD70BE1EEF4A6B00F437AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70BD1EEF4A6B00F437AA /* AppDelegate.swift */; };
 		7ECD70C01EEF4A6B00F437AA /* TouchIDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD70BF1EEF4A6B00F437AA /* TouchIDVC.swift */; };
 		7ECD70C31EEF4A6B00F437AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD70C11EEF4A6B00F437AA /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		7EC5D4C01EEF4F04009B4977 /* TouchIDBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TouchIDBridging-Header.h"; path = "TouchIDResources/TouchIDBridging-Header.h"; sourceTree = "<group>"; };
+		7EC5D4C21EEF59C9009B4977 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7ECD70BA1EEF4A6B00F437AA /* TouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECD70BD1EEF4A6B00F437AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ECD70BF1EEF4A6B00F437AA /* TouchIDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDVC.swift; sourceTree = "<group>"; };
@@ -84,9 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EC5D4C11EEF59B7009B4977 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D4C21EEF59C9009B4977 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		7ECD70B11EEF4A6B00F437AA = {
 			isa = PBXGroup;
 			children = (
+				7EC5D4C11EEF59B7009B4977 /* Util */,
 				7ECD70EE1EEF4BDA00F437AA /* Resources */,
 				7ECD70BC1EEF4A6B00F437AA /* TouchID */,
 				7ECD70D11EEF4A6B00F437AA /* TouchIDTests */,
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC5D4C31EEF59C9009B4977 /* Constants.swift in Sources */,
 				7ECD70C01EEF4A6B00F437AA /* TouchIDVC.swift in Sources */,
 				7ECD70F41EEF4C5F00F437AA /* TouchIDManager.m in Sources */,
 				7ECD70F51EEF4C5F00F437AA /* TouchIDManager.swift in Sources */,
