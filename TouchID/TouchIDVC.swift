@@ -19,11 +19,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var rememberMeSwitch: UISwitch!
     @IBOutlet weak var enrollTouchIdSwitch: UISwitch!
     
+    @IBOutlet weak var activityInidcator: UIActivityIndicatorView!
+    
     // Define a class for user preferences
     let preferences = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityInidcator.stopAnimating()
+        
         
         var isTouchIDEnrolled:Bool! = false
         let enrollTouchId = preferences.object(forKey: "EnrollTouchID") as? Bool
@@ -58,7 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
+
         // evaluate login and password
         let userId          = userIdTextField.text!
         let userPassword    = passwordTextField.text!
@@ -69,19 +73,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if (rememberMeSwitch.isOn ? true : false) == true {
-            saveDefaults()
-        } else {
-            clearDefaults()
-        }
+        // dismiss the keyboard
+        self.view.endEditing(true)
+        
+        // Fields have been validated, hide the login screen to prevent tapping twice
+        loginStackView.isHidden = true
+        
         
         // fetch authentication from WP user table
         login_now(username:userId, password: userPassword)
-        
+    
+    
     }
     
     
     func loadDada() {
+        activityInidcator.stopAnimating()
+        
         // dismiss the keyboard
         self.view.endEditing(true)
         
@@ -127,6 +135,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func keyPadAuthenticateUser() {
         
+        activityInidcator.stopAnimating()
         loginStackView.isHidden = false
         
     }
@@ -223,6 +232,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     func login_now(username:String, password:String) {
+        activityInidcator.startAnimating()
         let post_data: NSDictionary = NSMutableDictionary()
         
         post_data.setValue(username, forKey: "username")
@@ -272,9 +282,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     let preferences = UserDefaults.standard
                     preferences.set(session_data, forKey: "Session")
                     
+                    if (self.rememberMeSwitch.isOn ? true : false) == true {
+                        self.saveDefaults()
+                    } else {
+                        self.clearDefaults()
+                    }
+                    
                     DispatchQueue.main.async(execute: self.loadDada)
                 }
             } else {
+                
+                self.clearDefaults()
                 
                 DispatchQueue.main.async(execute: self.displayMyAlertMessage)
                 DispatchQueue.main.async(execute: self.keyPadAuthenticateUser)

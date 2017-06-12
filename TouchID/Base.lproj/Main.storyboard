@@ -21,6 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4Eu-iu-dUi">
+                                <rect key="frame" x="178" y="324" width="20" height="20"/>
+                                <color key="color" red="0.5568627451" green="0.0" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Os1-fZ-FVL" userLabel="Logout Stack View">
                                 <rect key="frame" x="62" y="298.5" width="250" height="70"/>
                                 <subviews>
@@ -110,10 +114,13 @@
                         <constraints>
                             <constraint firstItem="Os1-fZ-FVL" firstAttribute="centerX" secondItem="i5f-BU-3le" secondAttribute="centerX" id="2g7-tK-dGr"/>
                             <constraint firstItem="Os1-fZ-FVL" firstAttribute="centerY" secondItem="i5f-BU-3le" secondAttribute="centerY" id="JD1-Vy-b97"/>
+                            <constraint firstItem="4Eu-iu-dUi" firstAttribute="centerY" secondItem="i5f-BU-3le" secondAttribute="centerY" id="Tsz-OO-tDe"/>
+                            <constraint firstItem="4Eu-iu-dUi" firstAttribute="centerX" secondItem="i5f-BU-3le" secondAttribute="centerX" id="hxO-QD-cez"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kOh-wA-DHX"/>
                     <connections>
+                        <outlet property="activityInidcator" destination="4Eu-iu-dUi" id="t7u-aw-JpG"/>
                         <outlet property="enrollTouchIdSwitch" destination="NbF-de-zq2" id="fN2-dP-KJd"/>
                         <outlet property="loginStackView" destination="Hab-9p-OLv" id="Avt-Zb-msg"/>
                         <outlet property="logoutStackView" destination="Os1-fZ-FVL" id="VJg-hM-M33"/>
